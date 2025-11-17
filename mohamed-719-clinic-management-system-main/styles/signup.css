@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 10px 0;
+  color: #999;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+#email,
+#password,
+#sub {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+
+.submit-btn {
+  background-color: #00b4d8;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.terms {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.terms a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+.back {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.back a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ========= ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========= APPLY ANIMATIONS ========== */
+
+.signup-container {
+  animation: fadeIn 1s ease;
+}
+
+.signup-container input,
+.signup-container select {
+  animation: slideIn 0.6s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.signup-container .submit-btn {
+  animation: zoomIn 0.8s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+
+
+
+.error {
+  display: none;
+  color: red;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+#hint{
+  display: none;
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+}
+

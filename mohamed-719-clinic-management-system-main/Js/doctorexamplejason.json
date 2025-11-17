@@ -1,0 +1,367 @@
+{
+  "doctors": [
+    {
+      "ID": "1",
+      "name": "Dr. Ahmed Aboul Gheit",
+      "imageURL": "./assets/images/doc1.jpg",
+      "speciality": "Orthopedic specialist",
+      "summary": "Dr. Ahmed Aboul Gheit and cosmetic shoes. He holds a master's degree in dermatology from Cairo University.",
+      "Fees": "500 EGP",
+      "rating": {
+        "overallRate": 4.8,
+        "numberOfPeopleRating": 120
+      },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Cairo",
+          "city": "Nasr City",
+          "street": "El Tayaran St.",
+          "block": "B12"
+        },
+        "schedule": {
+          "workingDays": [
+            "Saturday",
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "workingHours": { "startingHours": "09:00", "closingHours": "17:00" }
+        },
+        "offers": ["Free ECG with first visit", "10% discount on follow-up"]
+      },
+      "reviews": [
+        {
+          "auther": "Mohamed Ali",
+          "content": "دكتور ممتاز و محترم جدا",
+          "rating": 5,
+          "date": "2023-10-01"
+        },
+        {
+          "auther": "Sara Mostafa",
+          "content": "بشوش وشاطر ومطمئن",
+          "rating": 4.5,
+          "date": "2023-10-02"
+        }
+      ]
+    },
+    {
+      "ID": "2",
+      "name": "Dr. Sara Mahmoud",
+      "imageURL": "./assets/images/doc2.jpg",
+      "speciality": "Dermatology",
+      "summary": "Expert in skin care, laser treatments, and cosmetic dermatology.",
+      "Fees": "450 EGP",
+      "rating": { "overallRate": 4.0, "numberOfPeopleRating": 95 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Giza",
+          "city": "Dokki",
+          "street": "El Nile St.",
+          "block": "B15"
+        },
+        "schedule": {
+          "workingDays": ["Saturday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "09:00", "closingHours": "16:00" }
+        },
+        "offers": ["Free skin consultation", "15% off laser sessions"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Layla Saeed",
+          "comment": "Helped me a lot.",
+          "rating": 4.7
+        },
+        {
+          "reviewer": "Omar Youssef",
+          "comment": "Very kind and professional.",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "ID": "3",
+      "name": "Dr. Mohamed Yassin",
+      "imageURL": "./assets/images/doc3.jpg",
+      "speciality": "Orthopedics",
+      "summary": "Experienced orthopedic surgeon specialized in trauma and sports medicine.",
+      "Fees": "350 EGP",
+      "rating": { "overallRate": 4.5, "numberOfPeopleRating": 80 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Alexandria",
+          "city": "Smouha",
+          "street": "Gamal Abdel Nasser St.",
+          "block": "C22"
+        },
+        "schedule": {
+          "workingDays": ["Sunday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "11:00", "closingHours": "18:00" }
+        },
+        "offers": ["Free X-ray review", "10% discount for students"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Karim Hassan",
+          "comment": "Solved my back problem.",
+          "rating": 4.8
+        },
+        {
+          "reviewer": "Aya Adel",
+          "comment": "Very patient and helpful.",
+          "rating": 4.4
+        }
+      ]
+    },
+    {
+      "ID": "4",
+      "name": "Dr. Kamal ElSherif",
+      "imageURL": "./assets/images/doc4.jpg",
+      "speciality": "Pediatrics",
+      "summary": "Pediatrician with 12 years of experience in children's health.",
+      "Fees": "200 EGP",
+      "rating": { "overallRate": 4.6, "numberOfPeopleRating": 70 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Cairo",
+          "city": "Nasr City",
+          "street": "El Tayaran St.",
+          "block": "B5"
+        },
+        "schedule": {
+          "workingDays": ["Sunday", "Tuesday", "Thursday"],
+          "workingHours": { "startingHours": "09:00", "closingHours": "15:00" }
+        },
+        "offers": ["Free growth check", "Discount on vaccinations"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Fatma Mohamed",
+          "comment": "Very friendly with kids.",
+          "rating": 5
+        },
+        {
+          "reviewer": "Nour Samy",
+          "comment": "Professional doctor.",
+          "rating": 4.5
+        }
+      ]
+    },
+    {
+      "ID": "5",
+      "name": "Dr. Salma Adel",
+      "imageURL": "./assets/images/doc5.jpg",
+      "speciality": "Dentistry",
+      "summary": "Dentist specialized in orthodontics and smile design.",
+      "Fees": "150 EGP",
+      "rating": { "overallRate": 4.9, "numberOfPeopleRating": 130 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Cairo",
+          "city": "Maadi",
+          "street": "Road 9",
+          "block": "A7"
+        },
+        "schedule": {
+          "workingDays": ["Saturday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "12:00", "closingHours": "20:00" }
+        },
+        "offers": ["Free dental checkup", "20% off braces"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Samir Ali",
+          "comment": "Best dentist in town.",
+          "rating": 5
+        },
+        {
+          "reviewer": "Nada Hany",
+          "comment": "Very gentle treatment.",
+          "rating": 4.9
+        }
+      ]
+    },
+    {
+      "ID": "6",
+      "name": "Dr. Laila Hussein",
+      "imageURL": "./assets/images/doc6.jpg",
+      "speciality": "Gynecology",
+      "summary": "Gynecologist with expertise in women’s reproductive health.",
+      "Fees": "190 EGP",
+      "rating": { "overallRate": 4.0, "numberOfPeopleRating": 100 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Giza",
+          "city": "Mohandessin",
+          "street": "Gameat El Dowal St.",
+          "block": "C9"
+        },
+        "schedule": {
+          "workingDays": ["Sunday", "Tuesday", "Thursday"],
+          "workingHours": { "startingHours": "10:00", "closingHours": "16:00" }
+        },
+        "offers": ["Free pregnancy checkup", "Discount on ultrasound"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Heba Ali",
+          "comment": "Very supportive doctor.",
+          "rating": 4.8
+        },
+        {
+          "reviewer": "Rania Magdy",
+          "comment": "Helped me a lot.",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "ID": "7",
+      "name": "Dr. Tamer Mostafa",
+      "imageURL": "./assets/images/doc7.jpg",
+      "speciality": "Neurology",
+      "summary": "Neurologist with experience in treating complex brain disorders.",
+      "Fees": "200 EGP",
+      "rating": { "overallRate": 4.4, "numberOfPeopleRating": 90 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Cairo",
+          "city": "Downtown",
+          "street": "Talaat Harb St.",
+          "block": "D10"
+        },
+        "schedule": {
+          "workingDays": ["Saturday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "09:00", "closingHours": "15:00" }
+        },
+        "offers": ["Free consultation for first visit", "Discount on MRI scan"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Ola Fathi",
+          "comment": "Very knowledgeable.",
+          "rating": 4.5
+        },
+        {
+          "reviewer": "Mohamed Zaki",
+          "comment": "Explained everything well.",
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "ID": "8",
+      "name": "Dr. Salma Hussein",
+      "imageURL": "./assets/images/doc6.jpg",
+      "speciality": "Dermatology",
+      "summary": "Expert in skin care and cosmetic dermatology.",
+      "Fees": "300 EGP",
+      "rating": { "overallRate": 4.0, "numberOfPeopleRating": 120 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Giza",
+          "city": "Dokki",
+          "street": "Tharwat St.",
+          "block": "B2"
+        },
+        "schedule": {
+          "workingDays": ["Sunday", "Tuesday", "Thursday"],
+          "workingHours": { "startingHours": "10:00", "closingHours": "17:00" }
+        },
+        "offers": ["Free skin test", "Discount on laser treatment"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Nada Ali",
+          "comment": "Excellent results!",
+          "rating": 4.8
+        },
+        {
+          "reviewer": "Hany Magdy",
+          "comment": "Very professional.",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "ID": "9",
+      "name": "Dr. Tamer Mostafa",
+      "imageURL": "./assets/images/doc7.jpg",
+      "speciality": "Neurology",
+      "summary": "Neurologist with experience in treating complex brain disorders.",
+      "Fees": "200 EGP",
+      "rating": { "overallRate": 4.4, "numberOfPeopleRating": 90 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Cairo",
+          "city": "Downtown",
+          "street": "Talaat Harb St.",
+          "block": "D10"
+        },
+        "schedule": {
+          "workingDays": ["Saturday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "09:00", "closingHours": "15:00" }
+        },
+        "offers": ["Free consultation for first visit", "Discount on MRI scan"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Ola Fathi",
+          "comment": "Very knowledgeable.",
+          "rating": 4.5
+        },
+        {
+          "reviewer": "Mohamed Zaki",
+          "comment": "Explained everything well.",
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "ID": "10",
+      "name": "Dr. Rania Fathy",
+      "imageURL": "./assets/images/doc8.jpg",
+      "speciality": "Pediatrics",
+      "summary": "Specialist in children’s health and development.",
+      "Fees": "220 EGP",
+      "rating": { "overallRate": 4.6, "numberOfPeopleRating": 75 },
+      "clinic": {
+        "phone":"01222555674",
+        "location": {
+          "govern": "Alexandria",
+          "city": "Smouha",
+          "street": "Mostafa Kamel St.",
+          "block": "C5"
+        },
+        "schedule": {
+          "workingDays": ["Sunday", "Monday", "Wednesday"],
+          "workingHours": { "startingHours": "08:00", "closingHours": "14:00" }
+        },
+        "offers": ["Discount on vaccination", "Free checkup for infants"]
+      },
+      "reviews": [
+        {
+          "reviewer": "Mona Khaled",
+          "comment": "Great with kids!",
+          "rating": 4.7
+        },
+        {
+          "reviewer": "Ali Gamal",
+          "comment": "Very caring doctor.",
+          "rating": 4.5
+        }
+      ]
+    }
+  ]
+}

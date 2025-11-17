@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/contact.css">
+        <link rel="stylesheet" href="styles/header-footer.css"/>
+
+</head>
+<body>
+    <!-- Header -->
+  <header class="site-header">
+
+    <!-- ************************************************** -->
+    <div class=" header-bar">
+      <div class="logo"><h1 class="logoText">Hakeem</h1></div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="btn" id="Show-more" href="index.html">Home</a></li>
+          <li><a href="bookings.html" class="btn">Bookings</a></li>
+          <li><a href="./all-specialities.html" class="btn" id="Show-more">Hakeem_Gang</a></li>
+          <li><a class="btn" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div id="userContainer" style="padding: 30px;">
+      <div class="auth-buttons" id="auth-buttons">
+        <button type="button" id="lin" class="login-btn btns" onclick="loginclick()">Login</button>
+        <button type="button" id="signup-btn" class="signup-btn btns" onclick="signclick()">Sign Up</button>
+      </div>
+      <div id="userWelcome" style="font-weight : bold;">
+        <p></p>
+        <button id="lout" class="logout-btn btns" onclick="logOutClick()">LogOut</button>
+      </div>
+    </div>
+    </nav>
+    </div>
+  </header>
+  <div class="page-content">
+    <!-- Left: Contact Form -->
+    <div class="contact-form">
+      <h2>Call Us</h2>
+      <p>We Will Be Happy to Hear From You</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Your Name">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" value="+20" placeholder="Enter Your Phone Number">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Your Email">
+
+        <label for="comment">Comments</label>
+        <textarea id="comment" placeholder="Enter Your Comments"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> support@vezeeta.com</p>
+      <p><strong>Phone:</strong> +20 100 000 0000</p>
+      <p><strong>Working Hours:</strong> 9am - 5pm (Sun - Thu)</p>
+      <p><strong>Address:</strong> 123 Vezeeta Street, Cairo, Egypt</p>
+    </div>
+  </div>
+  <footer class="site-footerFo">
+    <div class="containerFo footer-gridFo">
+      <div>
+        <h3>About the Platform</h3>
+        <p>A simplified platform to book appointments with doctors in
+          different specialties and cities.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="bookings.html">Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottomFo">© 2025 Doctors Platform</div>
+  </footer>
+
+
+    <!-- <script src="./Js/load-layout.js"></script> -->
+    <script>
+
+      function signclick() {
+        window.location.href = "signup.html";
+      }
+      function loginclick() {
+        window.location.href = "login.html";
+      }
+  
+      function logOutClick() {
+        let logoutpromise = new Promise(res => {
+          localStorage.removeItem("username");
+          localStorage.removeItem("patient-id");
+          localStorage.removeItem("email");
+          res("login.html")
+        }).then(value => {
+          location.href = value;
+        })
+  
+  
+      }
+      
+      let userName = localStorage.getItem("username");
+      let userSigned = document.getElementById("userWelcome")
+      let userbtns = document.getElementById("auth-buttons")
+      if (localStorage.getItem("username")) {
+        userbtns.style.cssText = `
+              display:none
+          `
+        let nameText = userSigned.nextSibling
+        nameText.innerHtml = `<p>${userName}</p>`;
+        userSigned.style.cssText = `
+              display:flex;
+          `
+      }
+      else {
+  
+        userbtns.style.cssText = `
+             display:flex;
+          `
+        userSigned.style.cssText = `
+              display:none;
+          `
+      }
+    </script>
+
+  
+          <!-- Footer -->
+            
+        <script src="./Js/load-layout.js"></script>
+</body>
+
+</html>

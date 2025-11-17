@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0; 
+}
+.profileContainer {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.customBar {
+    height: 4px;
+    background: #3498db;
+    margin-bottom: 20px;
+}
+
+/* Doctor Card */
+.doctorCardBox {
+    display: flex;
+    gap: 20px;
+    background: #f9f9ff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctorImageBox img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.doctorTextInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.doctorName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.doctorSpeciality {
+    font-size: 1rem;
+    color: #555;
+}
+
+.doctorRate {
+    font-size: 0.95rem;
+    color: #f39c12;
+}
+
+.doctorFees {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Info & Services */
+.sectionTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0 10px;
+    color: #2c3e50;
+}
+
+.doctorInfoBox,
+.doctorServicesBox,
+.doctorReserveBox,
+.doctorReviewsBox {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.servicesList {
+    list-style: none;
+    padding: 0;
+}
+
+.servicesList li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+/* Reservation */
+.reserveBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.reserveBtn:hover {
+    background: #2980b9;
+}
+
+/* Reviews */
+.reviewItem {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.reviewAuthor {
+    font-weight: bold;
+    color: #333;
+}
+
+.reviewRating {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.reviewText {
+    color: #555;
+    font-size: 0.95rem;
+}

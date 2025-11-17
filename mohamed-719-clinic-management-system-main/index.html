@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctors Platform - Home</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/addata.css" />
+  <link rel="stylesheet" href="styles/header-footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body onload="loadDoctors()">
+
+  <!-- Header -->
+  <header class="site-header">
+
+    <!-- ************************************************** -->
+    <div class="container header-bar">
+      <div class="logo"><h1 class="logoText">Hakeem</h1></div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="btn" id="Show-more" href="index.html">Home</a></li>
+          <li><a href="bookings.html" class="btn">Bookings</a></li>
+          <li><a href="./all-specialities.html" class="btn" id="Show-more">Hakeem_Gang</a></li>
+          <li><a class="btn" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div id="userContainer" style="padding: 30px;">
+      <div class="auth-buttons" id="auth-buttons">
+        <button type="button" id="lin" class="login-btn btns ubtns" onclick="loginclick()">Login</button>
+        <button type="button" id="signup-btn" class="signup-btn btns ubtns" onclick="signclick()">Sign Up</button>
+      </div>
+      <div id="userWelcome" style="font-weight : bold;">
+        <p></p>
+        <button id="lout" class="logout-btn btns ubtns" onclick="logOutClick()">LogOut</button>
+      </div>
+    </div>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="containerMain">
+    <section class="section-head">
+      <h2>Top Doctors</h2>
+      <div id="div-Show-more-doctor">
+        <a href="./all-specialities.html" id="Show-more-doctor">Show More</a>
+      </div>
+      <div>
+        <p>Browse doctors and book your appointment online easily.</p>
+      </div>
+    </section>
+
+    <!-- One row of cards + Auto-Scroll -->
+    <section class="doctors-strip">
+      <div id="doctors-list" class="scroller" aria-label="Doctors List"></div>
+    </section>
+    <!-- Offers Section -->
+    <section class="offers-section">
+      <div class="offers-header">
+        <h2>Choose from top offers</h2>
+        <a href="#" class="all-offers">All Offers &nbsp; ➤</a>
+      </div>
+
+      <div class="offers-container">
+        <button class="scroll-btn left" onclick="scrollOffers(-1)">&#10094;</button>
+
+        <div class="offers-wrapper" id="offersWrapper">
+          <!-- Offer Card -->
+          <div class="offer-card">
+            <span class="discount-badge">40% OFF</span>
+            <img src="./assets/offers/1.jpg" alt="Teeth Cleaning">
+            <h3>Teeth Cleaning</h3>
+            <p><span class="old-price">1500 EGP</span> <span class="new-price">900 EGP</span></p>
+            <p class="offers-count">94 Offers</p>
+          </div>
+
+          <div class="offer-card">
+            <span class="discount-badge">20% OFF</span>
+            <img src="./assets/offers/2.jpg" alt="Facial Cleansing">
+            <h3>Facial Cleansing</h3>
+            <p><span class="old-price">2000 EGP</span> <span class="new-price">1600 EGP</span></p>
+            <p class="offers-count">39 Offers</p>
+          </div>
+
+          <div class="offer-card">
+            <span class="discount-badge">3000% OFF</span>
+            <img src="./assets/offers/2.jpg" alt="Facial Cleansing">
+            <h3>Facial Cleansing</h3>
+            <p><span class="old-price">2000 EGP</span> <span class="new-price">1600 EGP</span></p>
+            <p class="offers-count">39 Offers</p>
+          </div>
+
+
+
+          <div class="offer-card">
+            <span class="discount-badge">530% OFF</span>
+            <img src="./assets/offers/4.jpg" alt="Facial Cleansing">
+            <h3>Facial Cleansing</h3>
+            <p><span class="old-price">2000 EGP</span> <span class="new-price">1600 EGP</span></p>
+            <p class="offers-count">39 Offers</p>
+          </div>
+
+
+          <div class="offer-card">
+            <span class="discount-badge">564% OFF</span>
+            <img src="./assets/offers/5.jpg" alt="Facial Cleansing">
+            <h3>Facial Cleansing</h3>
+            <p><span class="old-price">2000 EGP</span> <span class="new-price">1600 EGP</span></p>
+            <p class="offers-count">39 Offers</p>
+          </div>
+
+          <div class="offer-card">
+            <span class="discount-badge">20% OFF</span>
+            <img src="./assets/offers/6.jpg" alt="Metal Braces">
+            <h3>Metal Braces</h3>
+            <p><span class="old-price">10000 EGP</span> <span class="new-price">8000 EGP</span></p>
+            <p class="offers-count">3 Offers</p>
+          </div>
+
+          <div class="offer-card">
+            <span class="discount-badge">20% OFF</span>
+            <img src="./assets/offers/7.jpg" alt="Face peeling">
+            <h3>Face peeling</h3>
+            <p><span class="old-price">2000 EGP</span> <span class="new-price">1600 EGP</span></p>
+            <p class="offers-count">4 Offers</p>
+          </div>
+        </div>
+
+        <button class="scroll-btn right" onclick="scrollOffers(1)">&#10095;</button>
+      </div>
+    </section>
+    <section>
+      <div class="nxrth-medical-component">
+  <div class="nxrth-header">
+    <h1 class="nxrth-title">NXRTH</h1>
+    <p class="nxrth-tagline">North, your way to practice peace.</p>
+    <button class="nxrth-explore-btn">Explore North</button>
+  </div>
+  
+  <div class="nxrth-medical-section">
+    <div class="nxrth-medical-card">
+      <h2>Have a Medical Question?</h2>
+      <p>Submit your medical question and receive an answer from a specialized doctor</p>
+      <button class="nxrth-ask-btn">Ask now</button>
+    </div>
+    
+    <div class="nxrth-pharmacy-card">
+      <h2>Pharmacy</h2>
+      <p>Get your medicine and all your pharmacy needs.</p>
+      <button class="nxrth-order-btn">Place order</button>
+    </div>
+  </div>
+</div>
+    </section>
+    <section>
+       <div class="healthcare-section">
+        <div class="healthcare-header">
+            <h2 class="healthcare-title">All your healthcare needs</h2>
+            <p class="healthcare-subtitle">Search and book a clinic visit, home visit, or a teleconsultation. Order your medicine and book a service or operation.</p>
+        </div>
+        
+        <div class="healthcare-features">
+            <div class="healthcare-feature">
+                <h3 class="feature-title">
+                    <i class="feature-icon fas fa-star"></i>
+                    Verified patient reviews
+                </h3>
+                <p class="feature-description">Doctor ratings are from patients who booked and visited the doctor through Hakeem.</p>
+            </div>
+            
+            <div class="healthcare-feature">
+                <h3 class="feature-title">
+                    <i class="feature-icon fas fa-check-circle"></i>
+                    Your booking is confirmed
+                </h3>
+                <p class="feature-description">Your booking is automatically confirmed, as the doctor specifies his working hours and is notified of the booking details.</p>
+            </div>
+            
+            <div class="healthcare-feature">
+                <h3 class="feature-title">
+                    <i class="feature-icon fas fa-credit-card"></i>
+                    Book for free, and pay in the clinic
+                </h3>
+                <p class="feature-description">The consultation fees stated on Hakeem are the actual doctor's fees with no extra charges.</p>
+            </div>
+                  <div class="healthcare-feature">
+                <h3 class="feature-title">
+                <i class="fas fa-heartbeat"></i>
+
+                    All your healthcare needs
+                </h3>
+                <p class="feature-description">Search and book a clinic visit, home visit, or a teleconsultation. Order your medicine and book a service or operation.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+      <div class="Hakeem-app-section">
+        <div class="Hakeem-container">
+            <div class="Hakeem-app-content">
+                <div class="Hakeem-logo">
+                    <div class="Hakeem-logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="Hakeem-logo-text">Hakeem</div>
+                </div>
+                
+                <h2 class="Hakeem-title">Download Hakeem Application</h2>
+                <p class="Hakeem-description">Search, compare and book doctor consultations with ease. Order your medicines & get them delivered within 60 minutes. Track your steps count & earn points on hitting the daily goal</p>
+                
+                <div class="Hakeem-download-badges">
+                    <div class="download-badge">
+                        <i class="fab fa-apple badge-icon"></i>
+                        <div class="badge-text">
+                            <span class="badge-label">Download on the</span>
+                            <span class="badge-store">App Store</span>
+                        </div>
+                    </div>
+                    <div class="download-badge">
+                        <i class="fab fa-google-play badge-icon"></i>
+                        <div class="badge-text">
+                            <span class="badge-label">Get it on</span>
+                            <span class="badge-store">Google Play</span>
+                        </div>
+                    </div>
+                    <div class="download-badge">
+                        <i class="fab fa-app-store-ios badge-icon"></i>
+                        <div class="badge-text">
+                            <span class="badge-label">Explore it on</span>
+                            <span class="badge-store">App Gallery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Hakeem-features">
+                    <div class="feature">
+                        <h3 class="feature-title">
+                            <i class="fas fa-home feature-icon"></i>
+                            Home & Earn
+                        </h3>
+                        <p>Hakeem is a brand new user.</p>
+                    </div>
+                    <div class="feature">
+                        <h3 class="feature-title">
+                            <i class="fas fa-bullseye feature-icon"></i>
+                            Follow your goal
+                        </h3>
+                        <p>Hakeem provides quality of information using digital information to help you learn more about your favorite work to address.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Hakeem-app-image">
+                <div class="hakeem-logo">
+                    <i class="fas fa-plus-circle hakeem-icon"></i>
+                    <span >Hakeem</span>
+                </div>
+                <img src="https://placehold.co/300x600/3498db/FFFFFF/png?text=Hakeem+App" alt="Hakeem App" class="Hakeem-mockup">
+            </div>
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <footer class="site-footerFo">
+    <div class="containerFo footer-gridFo">
+      <div>
+        <h3>About the Platform</h3>
+        <p>A simplified platform to book appointments with doctors in
+          different specialties and cities.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="bookings.html">Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottomFo">© 2025 Doctors Platform</div>
+  </footer>
+
+
+  <script src="./Js/index.js"></script>
+
+  <!-- <script src="./Js/load-layout.js"></script> -->
+  <script>
+
+    function signclick() {
+      window.location.href = "signup.html";
+    }
+    function loginclick() {
+      window.location.href = "login.html";
+    }
+
+    function logOutClick() {
+      let logoutpromise = new Promise(res => {
+        localStorage.removeItem("username");
+        localStorage.removeItem("patient-id");
+        localStorage.removeItem("email");
+        res("login.html")
+      }).then(value => {
+        location.href = value;
+      })
+
+
+    }
+
+    let userName = localStorage.getItem("username");
+    let userSigned = document.getElementById("userWelcome")
+    let userbtns = document.getElementById("auth-buttons")
+    if (localStorage.getItem("username")) {
+      userbtns.style.cssText = `
+              display:none
+          `
+      let nameText = userSigned.nextSibling
+      nameText.innerHtml = `<p>${userName}</p>`;
+      userSigned.style.cssText = `
+              display:flex;
+          `
+    }
+    else {
+
+      userbtns.style.cssText = `
+             display:flex;
+          `
+      userSigned.style.cssText = `
+              display:none;
+          `
+    }
+  </script>
+
+  <script>
+    function scrollOffers(direction) {
+      const wrapper = document.getElementById("offersWrapper");
+      const scrollAmount = 300;
+      wrapper.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,759 @@
+@font-face {
+    font-family: 'diwani'; /* Name of the font */
+    src: url('../fonts/alsamt diwani.ttf') format('truetype'); /* Path to the .ttf file */
+}
+@font-face {
+    font-family: 'watad'; /* Name of the font */
+    src: url('../fonts/watad.otf') format('truetype'); /* Path to the .ttf file */
+}
+ html, body { margin: 0; padding: 0; } 
+ .site-header{
+  padding: 0;
+ }
+.containerMain {
+  font-family: Tahoma, Arial, sans-serif;
+  background: white;
+  color: #223;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.containerMain {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ====== الهيدر ====== */
+.site-header {
+  background: rgb(99, 99, 245);
+  color: #fff;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand {
+  margin: 0;
+  font-size: 22px;
+}
+
+.nav a {
+  margin: 0 8px;
+}
+
+.btn {
+  background: #fff;
+  color: #0a6;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ====== العناوين ====== */
+/* .section-head { margin: 28px 0 14px; }
+.section-head h2 { margin: 0 0 6px; } */
+
+/* ====== شريط الأطباء (سطر واحد) ====== */
+.scroller {
+  position: relative;
+  overflow: hidden;
+  /* نخفي التمرير */
+  white-space: nowrap;
+  /* كل العناصر في سطر واحد */
+  scroll-behavior: smooth;
+  /* سكرول ناعم */
+  direction: ltr;
+  /* لتبسيط التحكم في scrollLeft */
+  padding: 8px 0 16px;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller {
+  scrollbar-width: none;
+}
+/* كارت أساسي بسيط (الباقي هيطبقه الـ JS) */
+.doctor-card {
+  display: inline-block;
+  /* مهم للسطر الواحد */
+  vertical-align: top;
+  width: 240px;
+  min-width: 240px;
+  margin: 0 12px;
+  background: #fff;
+  /* سيتم استبداله بألوان من JS */
+  color: rgb(48, 49, 51);
+  /* قد يُستبدل عبر JS إن لزم */
+  text-align: center;
+  padding: 0;
+  border-radius: 16px;
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.doctor-card h3 {
+  margin: 6px 0 4px;
+  font-size: 18px;
+}
+
+.doctor-card p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+
+.doctor-card .details-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.details-btn{
+  color: #fff;
+
+}
+.details-btn:hover {
+  background: #0b8fdd;
+  color: #fff;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #0b8fdd, #0fb49e);
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 26px 0;
+}
+
+.site-footer h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer li {
+  margin: 6px 0;
+}
+
+.site-footer a {
+  color: #fff;
+  opacity: 0.95;
+}
+
+.site-footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ====== أنيميشن خفيفة (سيتم تفعيلها من JS) ====== */
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* last update in chage of file index.js add external style to index.js */
+/* Base doctor card */
+.doctor-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 22px rgba(78, 140, 228, 0.1);
+  border-radius: 12px;
+  padding: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.doctor-card:hover {
+  transform: scale(1.035);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+}
+
+.doctor-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.details-btn:hover {
+  background: #0d47a1;
+}
+
+/* Soft card colors */
+.color-0 {
+  background: #e3f2fd;
+}
+
+.color-1 {
+  background: #e8f5e9;
+}
+
+.color-2 {
+  background: #fff3e0;
+}
+
+.color-3 {
+  background: #f3e5f5;
+}
+
+.color-4 {
+  background: #e0f7fa;
+}
+
+.color-5 {
+  background: #fffde7;
+}
+
+.color-6 {
+  background: #ede7f6;
+}
+
+.color-7 {
+  background: #e1f5fe;
+}
+
+.color-8 {
+  background: #f1f8e9;
+}
+
+.color-9 {
+  background: #fce4ec;
+}
+
+/* Doctor details page */
+.doctor-img {
+  max-width: 260px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* Floaty animation */
+@keyframes floaty {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Scroll direction */
+.ltr-scroll {
+  direction: ltr;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/*more style to the content*/
+
+/* Show More Link */
+#div-Show-more-doctor {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+#Show-more-doctor {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#Show-more-doctor:hover {
+  background-color: #2980b9;
+}
+
+/* NXRTH Medical Component Styles - Scoped to prevent conflicts */
+.nxrth-medical-component {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+        border-radius: 20px
+}
+
+.nxrth-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nxrth-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.nxrth-tagline {
+  font-size: 1.1rem;
+  margin: 0 0 25px 0;
+  color: #7f8c8d;
+}
+
+.nxrth-explore-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nxrth-explore-btn:hover {
+  background-color: #266c9b;
+}
+
+.nxrth-medical-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nxrth-medical-card,
+.nxrth-pharmacy-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nxrth-medical-card h2,
+.nxrth-pharmacy-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.nxrth-medical-card p,
+.nxrth-pharmacy-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #7f8c8d;
+  margin: 0 0 20px 0;
+}
+
+.nxrth-ask-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nxrth-ask-btn:hover {
+  background-color: #c0392b;
+}
+
+.nxrth-order-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nxrth-order-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nxrth-medical-section {
+    flex-direction: column;
+  }
+
+  .nxrth-title {
+    font-size: 2rem;
+  }
+}
+/* Import Aousame font */
+@import url('https://fonts.cdnfonts.com/css/aousame');
+
+.healthcare-section {
+  font-family: 'Aousame', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      margin: 50px 20px;
+        border-radius: 20px
+}
+
+.healthcare-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.healthcare-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.healthcare-subtitle {
+  font-size: 18px;
+  color: #6c757d;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.healthcare-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.healthcare-feature {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.healthcare-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .healthcare-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .healthcare-feature {
+    max-width: 100%;
+  }
+
+  .healthcare-title {
+    font-size: 28px;
+  }
+
+  .healthcare-subtitle {
+    font-size: 16px;
+  }
+}
+/* new downllod the app Hakeem*/
+.Hakeem-app-section {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      margin: 50px 20px;
+        border-radius: 20px
+}
+
+.Hakeem-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.Hakeem-app-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.Hakeem-app-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.Hakeem-mockup {
+  max-width: 300px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.Hakeem-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Hakeem-logo-icon {
+  font-size: 32px;
+  color: #3498db;
+  margin-right: 15px;
+}
+
+.Hakeem-logo-text {
+  font-family: 'Playmaker', cursive;
+  font-size: 75px;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.Hakeem-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.Hakeem-description {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.Hakeem-download-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.download-badge {
+  background: #2c3e50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.download-badge:hover {
+  transform: translateY(-3px);
+}
+
+.badge-icon {
+  font-size: 24px;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-label {
+  font-size: 12px;
+}
+
+.badge-store {
+  font-size: 16px;
+}
+
+.Hakeem-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fas fa-heartbeat {
+  margin-right: 10px;
+    width: 19px;
+}
+
+.feature-list li {
+  padding: 5px 0;
+  color: #6c757d;
+  font-size: 14px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.hakeem-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.hakeem-icon {
+  color: #3498db;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .Hakeem-container {
+    flex-direction: column;
+  }
+
+  .Hakeem-app-image {
+    order: -1;
+  }
+
+  .Hakeem-title {
+    font-size: 28px;
+  }
+
+  .download-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .Hakeem-features {
+    flex-direction: column;
+  }
+}
+
+.fa-plus-circle > span {
+  font-family: 'Playmaker', cursive;
+}

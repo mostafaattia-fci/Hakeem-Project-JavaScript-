@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles/signup.css" />
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <button class="facebook-btn" id="facebook">Continue with Facebook</button>
+    <div class="divider">OR</div>
+   <form id="signup-form"  onsubmit="validatAll(event)">
+  <div>
+    <input type="text" id="fullName" placeholder="Full Name"  onblur="validateName(event)" />
+    <div class="error" id="name-error">Name Must Be at Least 8 Characters</div>
+  </div>
+
+  <div>
+    <input type="tel" id="phone" placeholder="Phone Number"  onblur="validatePhone(event)" value="+20"/>
+    <div class="error" id="phone-error">Phone Number Is Not Valid!</div>
+  </div>
+
+  <div>
+    <input type="email" id="email" placeholder="Email Address"  onblur="validateEmail(event)"/>
+    <div class="error" id="email-error" >Email Must Be example@gmail.com</div>
+  </div>
+
+  <div>
+    <select id="gender" onblur="validateGender(event)">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <div class="error" id="gender-error" >Choose a Gender!</div>
+  </div>
+
+  <div>
+    <input type="date" id="dob" onblur = "validateDob(event)"/>
+    <div class="error" id="dob-error" >Please Enter Your Date Of Birth</div>
+  </div>
+
+  <div>
+    <input type="password" id="password" placeholder="Password"  onblur="validatePassword(event)" />
+    <div class="error" id="password-error" >
+      Password Must Be at Least 8 Characters, Include a Number and a Letter!
+    </div>
+  </div>
+
+  <div>
+    <input type="password" id="rep-password" placeholder="Repeat Password"  onblur="validateRepPassword(event)" />
+    <div class="error" id="rep-password-error">Passwords Doesn't Match!</div>
+  </div>
+
+  <button type="submit" class="submit-btn" id="sub">JOIN NOW</button>
+</form>
+
+    <p class="terms">By signing up, you agree to our <a href="#" id="termsofuse">Terms of Use</a>.</p>
+    <p class="back">already have an account? <a id="logiin" href="login.html">Login</a></p>
+  </div>
+  <script src="Js/signup.js"></script>
+  
+
+</body>
+</html>

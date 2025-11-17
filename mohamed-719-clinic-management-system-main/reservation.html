@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reservation</title>
+    <link rel="stylesheet" href="./styles/reservation.css">
+
+  <link rel="stylesheet" href="styles/header-footer.css" />
+</head>
+
+<body>
+  <header class="site-header">
+
+    <!-- ************************************************** -->
+    <div class=" header-bar">
+      <div class="logo"><h1 class="logoText">Hakeem</h1></div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="btn" id="Show-more" href="index.html">Home</a></li>
+          <li><a href="bookings.html" class="btn">Bookings</a></li>
+          <li><a href="./all-specialities.html" class="btn" id="Show-more">Hakeem_Gang</a></li>
+          <li><a class="btn" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div id="userContainer" style="padding: 30px;">
+      <div class="auth-buttons" id="auth-buttons">
+        <button type="button" id="lin" class="login-btn btns" onclick="loginclick()">Login</button>
+        <button type="button" id="signup-btn" class="signup-btn btns" onclick="signclick()">Sign Up</button>
+      </div>
+      <div id="userWelcome" style="font-weight : bold;">
+        <p></p>
+        <button id="lout" class="logout-btn btns" onclick="logOutClick()">LogOut</button>
+      </div>
+    </div>
+    </nav>
+    </div>
+  </header>
+  <main>
+    <div class="schedule-container">
+    <h2>Book Appointment</h2>
+    <form id="reservation-form">
+      <label class="labelG" for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" class="patientName" name="patientName">
+      <label class="labelG">E-mail:</label>
+      <h4 id="patientEmail"></h4>
+      <label class="labelG">Doctor's Name:</label>
+      <h4 id="doctorName"></h4>
+      <label class="labelG">Appointment Price:</label>
+      <h4 id="Price"></h4>
+      <label class="labelG">Clinic Location:</label>
+      <h4 id="location"></h4>
+      <label class="labelG">Working days:</label>
+      <h4 id="workigDays"></h4>
+      <label class="labelG">Working Hours:</label>
+      <h4 id="workingHours"></h4>
+
+
+
+      <label for="appointmentTime">Select Day:</label>
+      <input type="date" id="appointmentTime" required>
+
+      <button type="submit">Confirm Reservation</button>
+    </form>
+  </div>
+  </main>
+  
+  <footer class="site-footerFo">
+    <div class="containerFo footer-gridFo">
+      <div>
+        <h3>About the Platform</h3>
+        <p>A simplified platform to book appointments with doctors in
+          different specialties and cities.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="bookings.html">Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottomFo">© 2025 Doctors Platform</div>
+  </footer>
+
+
+  <!-- <script src="./Js/load-layout.js"></script> -->
+  <script>
+
+    function signclick() {
+      window.location.href = "signup.html";
+    }
+    function loginclick() {
+      window.location.href = "login.html";
+    }
+
+    function logOutClick() {
+      let logoutpromise = new Promise(res => {
+        localStorage.removeItem("username");
+        localStorage.removeItem("patient-id");
+        localStorage.removeItem("email");
+        res("login.html")
+      }).then(value => {
+        location.href = value;
+      })
+
+
+    }
+
+    let userName = localStorage.getItem("username");
+    let userSigned = document.getElementById("userWelcome")
+    let userbtns = document.getElementById("auth-buttons")
+    if (localStorage.getItem("username")) {
+      userbtns.style.cssText = `
+              display:none
+          `
+      let nameText = userSigned.nextSibling
+      nameText.innerHtml = `<p>${userName}</p>`;
+      userSigned.style.cssText = `
+              display:flex;
+          `
+    }
+    else {
+
+      userbtns.style.cssText = `
+             display:flex;
+          `
+      userSigned.style.cssText = `
+              display:none;
+          `
+    }
+  </script>
+  <script src="./Js/reservation.js"></script>
+</body>
+
+</html>

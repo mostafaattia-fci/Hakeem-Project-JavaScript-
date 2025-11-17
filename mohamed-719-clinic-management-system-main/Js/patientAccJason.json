@@ -1,0 +1,32 @@
+{
+  "account": {
+    "patientAccountCount": 1,
+    "patient": [
+      {
+        "ID": 1,
+        "name": "Mostafa Atia",
+        "password": "123",
+        "email": "mostafa12@gmail.com",
+        "phone": "0123456789",
+        "birthDate": "2000-01-01",
+        "gender": "male",
+        "bookings": [
+          {
+            "bookID": 1,
+            "doctorID": 0,
+            "bookingDate": "2025-08-20",
+            "bookingTime": "15:00",
+            "status": "reserved"
+          },
+          {
+            "bookID": 2,
+            "doctorID": 1,
+            "bookingDate": "2025-08-22",
+            "bookingTime": "10:00",
+            "status": "reserved"
+          }
+        ]
+      }
+    ]
+  }
+}

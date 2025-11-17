@@ -1,0 +1,209 @@
+
+
+/* hover ---buttons */
+.auth-buttons button:hover {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+}
+
+.doctordataBox {
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.containerof {
+  max-width: 1100px;
+  margin: 0 auto
+}
+
+
+/*list doctor*/
+
+/* Container as column */
+#doctor-content {
+  gap: 20px;
+    font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+}
+
+/* Doctor Card */
+.doctor-card {
+    display: flex;
+  width: 100%;
+  background: #fff;
+  margin: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+    flex-direction: row;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.doctor-card  .coner {
+  margin: 0 20px;
+}
+/* Doctor Image */
+
+
+.doctor-card img {
+  width: 320px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Name & Speciality */
+.doctor-card h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+
+.doctor-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Stars */
+.stars {
+  margin: 10px 0;
+}
+
+.list-star {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.list-star li {
+  color: gold;
+  font-size: 20px;
+}
+
+/* Rating count */
+.numberOfPeopleRating {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Info list */
+.doctor-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.doctor-card ul li {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.doctor-card ul li i {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Buttons */
+.btnof {
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px 5px 0 0;
+  transition: 0.3s;
+}
+
+.reservationof {
+  background-color: green;
+  color: white;
+}
+
+.reservationof:hover {
+  background-color: black;
+}
+
+.detailsof {
+  background-color: #372AAC;
+  color: white;
+}
+
+.detailsof:hover {
+  background-color: #0F172B;
+}
+
+#btn-32{
+  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-star> li > .fa-star{
+ color: #F0B13B;
+}
+
+#pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#pagination .page-btn {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#pagination .page-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+#pagination .active {
+  background: #007bff;
+  color: white;
+}
+/* the pagination */
+#pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#pagination .page-btn {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#pagination .page-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+#pagination .active {
+  background: #007bff;
+  color: white;
+}
